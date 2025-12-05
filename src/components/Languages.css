@@ -12,7 +12,7 @@
 }
 
 .language-item {
-  background: white;
+  background: var(--bg-secondary);
   padding: 1.5rem 2.5rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -22,6 +22,7 @@
   gap: 0.5rem;
   min-width: 150px;
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .language-item:hover {
@@ -33,6 +34,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-primary);
+  font-family: 'Playfair Display', serif;
 }
 
 .language-level {
@@ -41,5 +43,5 @@
   padding: 0.3rem 0.8rem;
   background: var(--bg-accent);
   border-radius: 20px;
+  font-family: 'Inter', sans-serif;
 }
-

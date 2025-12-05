@@ -11,10 +11,11 @@
 }
 
 .skills-category {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
 .category-title {
@@ -24,6 +25,7 @@
   margin-bottom: 1.5rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--border-color);
+  font-family: 'Playfair Display', serif;
 }
 
 .skills-list {
@@ -38,10 +40,11 @@
   font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .hard-skill {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--gradient-primary);
   color: white;
 }
 
@@ -62,4 +65,3 @@
     gap: 2rem;
   }
 }
-

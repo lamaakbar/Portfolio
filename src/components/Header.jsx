@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
 import './Header.css'
 
 const Header = () => {
@@ -25,9 +27,7 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <nav className="nav">
-          <div className="logo" onClick={() => scrollToSection('hero')}>
-            <span>LFA</span>
-          </div>
+          <Logo onClick={() => scrollToSection('hero')} />
           <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
             <li><a href="#about" onClick={() => scrollToSection('about')}>About</a></li>
             <li><a href="#experience" onClick={() => scrollToSection('experience')}>Experience</a></li>
@@ -36,15 +36,18 @@ const Header = () => {
             <li><a href="#education" onClick={() => scrollToSection('education')}>Education</a></li>
             <li><a href="#certifications" onClick={() => scrollToSection('certifications')}>Certifications</a></li>
           </ul>
-          <button 
-            className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className="header-actions">
+            <ThemeToggle />
+            <button 
+              className={`mobile-menu-toggle ${isMobileMenuOpen ? 'open' : ''}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </nav>
       </div>
     </header>

@@ -1,0 +1,54 @@
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.signature-line {
+  width: 120px;
+  height: 2px;
+  background: var(--gradient-primary);
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.signature-text {
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  font-size: 3rem;
+  font-weight: 500;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: rotate(-3deg);
+  letter-spacing: 3px;
+  position: relative;
+  font-style: italic;
+  filter: drop-shadow(0 2px 4px rgba(129, 140, 248, 0.3));
+}
+
+.signature-text::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: var(--gradient-primary);
+  opacity: 0.4;
+  transform: rotate(2deg);
+}
+
+@media (max-width: 768px) {
+  .signature-text {
+    font-size: 2.5rem;
+  }
+  
+  .signature-line {
+    width: 100px;
+  }
+}

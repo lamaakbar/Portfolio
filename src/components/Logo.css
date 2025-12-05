@@ -1,0 +1,81 @@
+.logo-container {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.logo-container:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-container:hover .logo-circle {
+  box-shadow: 0 6px 20px rgba(129, 140, 248, 0.6);
+  transform: rotate(10deg);
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  opacity: 0.3;
+  filter: blur(10px);
+  z-index: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-circle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .logo-glow {
+    width: 55px;
+    height: 55px;
+  }
+}

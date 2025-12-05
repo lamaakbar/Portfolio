@@ -20,9 +20,6 @@ const References = () => {
               <h3 className="reference-name">{ref.name}</h3>
               <p className="reference-title">{ref.title}</p>
               <p className="reference-company">{ref.company}</p>
-              <a href={`tel:+966${ref.phone.replace(/\s/g, '')}`} className="reference-phone">
-                {ref.phone}
-              </a>
             </div>
           ))}
         </div>

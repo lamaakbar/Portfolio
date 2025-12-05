@@ -133,7 +133,6 @@ This project is open source and available under the MIT License.
 ## Contact
 
 - Email: Lamaf.akbar@gmail.com
-- Phone: 0540300298
 - Location: Jeddah, Saudi Arabia
 - LinkedIn: [Your LinkedIn Profile]
 - GitHub: [Your GitHub Profile]

@@ -10,12 +10,13 @@
 }
 
 .project-card {
-  background: white;
+  background: var(--bg-secondary);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -24,21 +25,52 @@
   border-color: var(--primary-color);
 }
 
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.project-view-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.project-card:hover .project-view-indicator {
+  opacity: 1;
+}
+
+.project-view-indicator svg {
+  flex-shrink: 0;
+}
+
 .project-name {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-family: 'Playfair Display', serif;
 }
 
 .project-description {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .project-technologies {
@@ -53,6 +85,7 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.75rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .tech-tags {
@@ -63,11 +96,12 @@
 
 .tech-tag {
   padding: 0.4rem 0.8rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--gradient-primary);
   color: white;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -75,4 +109,3 @@
     grid-template-columns: 1fr;
   }
 }
-

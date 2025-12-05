@@ -11,16 +11,18 @@
 }
 
 .experience-item {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .experience-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
 }
 
 .experience-header {
@@ -34,6 +36,7 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .experience-meta {
@@ -41,6 +44,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
 }
 
 .experience-company {
@@ -59,6 +63,7 @@
   margin-bottom: 0.75rem;
   line-height: 1.6;
   color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
 }
 
 .experience-bullets li::before {
@@ -68,4 +73,3 @@
   color: var(--primary-color);
   font-weight: bold;
 }
-

@@ -10,7 +10,7 @@
 }
 
 .certification-card {
-  background: white;
+  background: var(--bg-primary);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -36,12 +36,14 @@
   color: var(--text-primary);
   margin-bottom: 0.75rem;
   line-height: 1.4;
+  font-family: 'Inter', sans-serif;
 }
 
 .cert-issuer {
   color: var(--text-secondary);
   font-size: 0.95rem;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -49,4 +51,3 @@
     grid-template-columns: 1fr;
   }
 }
-
